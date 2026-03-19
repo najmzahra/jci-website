@@ -1,0 +1,171 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "AI Odyssey Hackathon",
+      "slug": "ai-odyssey",
+      "date": "2025-11-30",
+      "endDate": "2025-12-07",
+      "year": 2025,
+      "image": "images/586913068_889249683444243_1923548606886018440_n.jpg",
+      "excerpt": "AI Odyssey is an international hackathon organized in collaboration with GDG FST and Dione Protocol. Over the course of 7 days, students and young professionals work on projects related to AI, data, finance, and sustainability.",
+      "description": "AI Odyssey is an international hackathon organized in collaboration with GDG FST and Dione Protocol. Over 7 days, students and young professionals work on projects related to AI, data, finance, and sustainability.\n\nThe event included workshops, technical mentoring, an in-person evaluation, and a final pitch.\n\nIt aimed to foster innovation, connect talents with international tech players, and promote high-impact technological solutions.",
+      "type": "Career",
+      "typeIcon": "fa-briefcase",
+      "participants": "+160 Participants",
+      "location": "En ligne + Startup Village",
+      "category": "Career Development",
+      "highlights": [
+        "workshops: An online workshop everyday to prepare participants for the D day",
+        "Networking: Participants had the opportunity to connect with professionals and peers",
+        "Career Talks: Panel discussions with senior professionals sharing insights on career development",
+        "Prizes and Giveaways: Exciting prizes for participants and winners of contests"
+      ],
+      "outcomes": [
+        "50+ internship offers extended to students",
+        "15+ job offers for graduates",
+        "Positive feedback from 95% of participating companies",
+        "Strong media coverage and social media engagement",
+        "Established partnerships with key industry players for future collaborations"
+      ],
+      "gallery": [
+        "images/2026/event1.jpg",
+        "images/2026/event1.jpg",
+        "images/2026/event1.jpg",
+        "images/2026/event1.jpg",
+        "images/2026/event1.jpg",
+        "images/2026/event1.jpg"
+      ],
+      "detailPage": "event-ai-odyssey-2025.html"
+    },
+    {
+      "id": 2,
+      "title": "Business Feud",
+      "slug": "business-feud",
+      "date": "2025-11-29",
+      "year": 2025,
+      "image": "images/events/business feud.jpg",
+      "excerpt": "A dynamic business competition inspired by the corporate world, where teams compete to win market share through strategic challenges and rapid decision-making rounds.",
+      "type": "Training",
+      "typeIcon": "fa-chalkboard",
+      "participants": "25 Participants",
+      "detailPage": "Business-feud-2025.html"
+    },
+    {
+      "id": 3,
+      "title": "Cultural Journey",
+      "slug": "cultural-journey",
+      "date": "2025-11-09",
+      "year": 2025,
+      "image": "images/events/cultural journey.jpg",
+      "excerpt": "Members explored the rich cultural heritage of Tunisia through guided tours and interactive workshops.",
+      "type": "Service",
+      "typeIcon": "fa-heart",
+      "participants": "22 Participants",
+      "detailPage": "event-cultural-journey-2025.html"
+    },
+    {
+      "id": 4,
+      "title": "Company Visit - 2nd Visit",
+      "slug": "company-visit",
+      "date": "2025-10-29",
+      "year": 2025,
+      "image": "images/events/company visit.jpg",
+      "excerpt": "A series of visits to successful companies across various sectors, offering participants a behind-the-scenes look at dedication, innovation, and corporate culture.",
+      "type": "Professional Development",
+      "typeIcon": "fa-building",
+      "participants": "30 Participants",
+      "detailPage": "event-company-visit-2025.html"
+    },
+    {
+      "id": 5,
+      "title": "LinkUp - Regional Collaboration",
+      "slug": "linkup",
+      "date": "2025-10-25",
+      "year": 2025,
+      "image": "images/events/link up.jpg",
+      "excerpt": "An exceptional inter-LOM team building bringing together five JCI organizations for a day of energy, unity, and collaboration.",
+      "type": "Team Building",
+      "typeIcon": "fa-handshake",
+      "participants": "50 Participants",
+      "detailPage": "event-linkup-2025.html"
+    },
+    {
+      "id": 6,
+      "title": "Welcoming Bootcamp 2025",
+      "slug": "welcoming-bootcamp",
+      "date": "2025-10-18",
+      "year": 2025,
+      "image": "images/events/bootcamp.jpg",
+      "excerpt": "An internal event introducing new members to the spirit and mission of JCI through interactive workshops and team building activities.",
+      "type": "Recruitment",
+      "typeIcon": "fa-users",
+      "participants": "50 Participants",
+      "detailPage": "event-welcoming-bootcamp-2025.html"
+    },
+    {
+      "id": 7,
+      "title": "✨ The One Where You Belong ✨",
+      "slug": "info-session",
+      "date": "2025-10-01",
+      "year": 2025,
+      "image": "images/events/info-session.jpg",
+      "excerpt": "Discover a community that feels more like family than just teamwork. Join us to learn about JCI TBS and find your place to grow, lead, and make an impact.",
+      "type": "Info Session",
+      "typeIcon": "fa-info-circle",
+      "participants": "Community",
+      "participantsIcon": "fa-heart",
+      "detailPage": "event-info-session-2025.html"
+    },
+    {
+      "id": 8,
+      "title": "TBS Universe",
+      "slug": "tbs-universe",
+      "date": "2025-07-22",
+      "year": 2025,
+      "image": "images/events/tbs universe.jpg",
+      "excerpt": "خوذ الباك و ارتاح ! الspécialité في الفاك ساهلة ! تخرّج تو ترتاح !\nكان تعديت بواحدة من الجمل هاذم احنا عنا ليك الحل 🤗\nJCI TBS تنظملكم événement باش توجهكم و تعطيكم معلومات اللازمة على TBS من بعد الباك حتى التخرج.🤯",
+      "type": "Info Session",
+      "typeIcon": "fa-info-circle",
+      "participants": "TBS Guide",
+      "participantsIcon": "fa-graduation-cap",
+      "externalLink": "https://fb.me/e/3jXEQ7VrO"
+    },
+    {
+      "id": 9,
+      "title": "Summer Camp",
+      "slug": "summer-camp",
+      "date": "2025-06-20",
+      "year": 2025,
+      "image": "images/events/summer.jpg",
+      "excerpt": "Join us at the Summer Camp Adventure in Mahdia ✨\nStep away from the routine and dive into two unforgettable days of sunshine, laughter, and team spirit ☀️\nWhether you're riding the waves, making memories, or growing as a leader, this is the summer escape you've been waiting for💙",
+      "type": "Team Building",
+      "typeIcon": "fa-info-circle",
+      "externalLink": "https://fb.me/e/hrxE0GNFl"
+    },
+    {
+      "id": 10,
+      "title": "Reset and Rise",
+      "slug": "reset-and-rise",
+      "date": "2025-06-19",
+      "year": 2025,
+      "image": "images/events/reset.jpg",
+      "excerpt": "Organized by JCI TBS El Mourouj in collaboration with JCI Curepipe\nIn today's fast-paced world, prioritizing mental well-being is more important than ever. Reset and Rise is a powerful two-part online event designed to help you pause, reflect, and come back mentally and emotionally stronger🧘‍♀️🧠\nJoin us for two inspiring and interactive sessions where you'll discover how small mindset shifts and healthy habits can create a lasting positive impact on your mental health.",
+      "type": "Event",
+      "typeIcon": "fa-brain",
+      "externalLink": "https://fb.me/e/3HKpDr3Va"
+    },
+    {
+      "id": 11,
+      "title": "AxeFinance",
+      "slug": "axefinance",
+      "date": "2025-05-21",
+      "year": 2025,
+      "image": "images/events/axefinance.jpg",
+      "excerpt": "Looking to launch your career in a fast-growing industry? This is your chance to get hired or land an internship with one of Tunisia's leading fintech companies! 💼🚀\nJoin us for an exclusive Info Session with AxeFinance, a global leader in credit process automation, and discover how you can become part of their dynamic and innovative team.",
+      "type": "Event",
+      "typeIcon": "fa-line-chart",
+      "externalLink": "https://fb.me/e/3HKpDr3Va"
+    }
+  ]
+}

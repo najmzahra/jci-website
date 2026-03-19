@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact JCI TBS - EL Mourouj. Get in touch with us to join or partner with our organization.">
+    <title>Contact | JCI TBS - EL Mourouj</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo (2).png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <img src="images/colored.png" alt="JCI TBS - EL Mourouj">
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list" id="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="team.html" class="nav-link">Our Team</a></li>
+                     <li><a href="events.html" class="nav-link">Events</a></li>
+                        <li><a href="partners.html" class="nav-link">Partners</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="header-social">
+                        <a href="https://www.facebook.com/JCITBS/" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jci_tbs" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/jci-tunis-business-school/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@jci.tbs" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://x.com/JCI_TBS" target="_blank" aria-label="X (Twitter)">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://jvc.jci.cc/#/organization-detail?channel_id=8485&id=8216" target="_blank" aria-label="JVC">
+                            <img src="images/jvc.png" alt="JVC" style="height: 1em; width: 1em; vertical-align: middle;" />
+                        </a>
+                    </div>
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Contact</span>
+            </div>
+            <h1>Let's Connect</h1>
+            <p>Reach out to JCI TBS – El Mourouj. We're here to support partnerships, collaborations, and new opportunities.</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid contact-map-grid">
+                <div class="contact-form-wrapper reveal">
+                    <h3>Get In Touch</h3>
+                    <p style="color: #666; margin-bottom: 20px; font-size: 0.95rem;">Have a question or partnership opportunity? We'd love to hear from you. Fill out the form below and we'll get back to you within 48 hours.</p>
+                    <form id="contact-form" action="https://script.google.com/macros/s/AKfycby90aDWaASwaYRlfXDUT0xaU1O6nr6l5VMHVhOAcXJ5Bm0vVGx4udMVgcJX72NcboDMqQ/exec" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Full Name *</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                            </div>
+                        </div>
+                        <!-- Honeypot field for spam protection -->
+                        <input type="text" name="_gotcha" style="display:none">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+216 XX XXX XXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Organization / Company</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Your organization name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="role">Purpose of Contact *</label>
+                            <select id="role" name="role" required onchange="toggleAdditionalField()">
+                                <option value="">Select a purpose</option>
+                                <option value="Partnership">Partnership Opportunity</option>
+                                <option value="Event Registration">Event Registration</option>
+                                <option value="Sponsorship">Sponsorship Inquiry</option>
+                                <option value="General">General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="additionalFieldGroup" style="display: none;">
+                            <label for="university">Additional Details</label>
+                            <input type="text" id="university" name="university" placeholder="Please provide more information">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us more about your inquiry or how we can help you..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            Send Inquiry <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+
+                    <script>
+                        function toggleAdditionalField() {
+                            const roleSelect = document.getElementById('role');
+                            const additionalGroup = document.getElementById('additionalFieldGroup');
+                            const additionalInput = document.getElementById('university');
+                            
+                            const optionsNeedingDetails = ['Partnership', 'Sponsorship', 'Event Registration'];
+                            
+                            if (optionsNeedingDetails.includes(roleSelect.value)) {
+                                additionalGroup.style.display = 'block';
+                                additionalInput.removeAttribute('disabled');
+                            } else {
+                                additionalGroup.style.display = 'none';
+                                additionalInput.value = '';
+                                additionalInput.setAttribute('disabled', 'true');
+                            }
+                        }
+                    </script>
+                </div>
+                <div class="contact-info reveal">
+                                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Address</h4>
+                            <p>Inside Tunis Business School,<br>El Mourouj, Ben Arous, Tunisia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Email</h4>
+                            <p><a href="mailto:jci.tbs.02@gmail.com">jci.tbs.02@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+21650677562">+216 50 677 562</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <h4>Follow Us</h4>
+                        <div class="contact-social-links">
+                            <a href="https://www.facebook.com/JCITBS/" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/jci_tbs" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/jci-tunis-business-school/" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@jci.tbs" target="_blank" aria-label="TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://x.com/JCI_TBS" target="_blank" aria-label="X (Twitter)">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                        <a href="https://jvc.jci.cc/#/organization-detail?channel_id=8485&id=8216" target="_blank" aria-label="JVC">
+                            <img src="images/jvc.png" alt="JVC" style="height: 1em; width: 1em; vertical-align: middle;" />
+                        </a>
+                        </div>
+                    </div>
+                    <div class="contact-map-embed" style="margin-top:32px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.073550257142!2d10.232777475641306!3d36.720794772269905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd37b666388fd9%3A0xc7c9316b2397f106!2sTunis%20Business%20School!5e0!3m2!1sfr!2stn!4v1766489428034!5m2!1sfr!2stn" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/white.png" alt="JCI TBS - EL Mourouj">
+                    </a>
+                    <p>
+                        JCI TBS – El Mourouj: Developing young leaders through action and innovation. As a local chapter of Junior Chamber International, we provide the platform for youth to create positive change.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/JCITBS/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/jci_tbs" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/jci-tunis-business-school/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.tiktok.com/@jci.tbs" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://x.com/JCI_TBS" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://jvc.jci.cc/#/organization-detail?channel_id=8485&id=8216" aria-label="JVC"><img src="images/wjvc.png" alt="JVC" style="height: 1em; width: 1em; vertical-align: middle;" /></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="partners.html">Become a Partner</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 JCI TBS - EL Mourouj. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

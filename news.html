@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest news, events and updates from JCI TBS - EL Mourouj.">
+    <title>News & Events | JCI TBS - EL Mourouj</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo (2).png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0">
+    </script>
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Facebook Row Container */
+        .fb-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 60px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Individual Facebook Card */
+        .fb-card {
+            max-width: 350px;
+            flex: 1 1 350px;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .fb-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Keep iframe responsive */
+        .fb-card iframe,
+        .fb-card span {
+            width: 100% !important;
+        }
+        
+        /* Force iframe to show full content */
+        .fb-card iframe {
+            min-height: 400px !important;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .fb-row {
+                padding: 40px 20px;
+            }
+            
+            .fb-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <img src="images/colored.png" alt="JCI TBS - EL Mourouj">
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list" id="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="team.html" class="nav-link">Our Team</a></li>
+                        <li><a href="news.html" class="nav-link active">News</a></li>
+                        <li><a href="partners.html" class="nav-link">Partners</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="header-social">
+                        <a href="https://www.facebook.com/JCITBS/" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jci_tbs" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/jci-tunis-business-school/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@jci.tbs" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>News & Events</span>
+            </div>
+            <h1>News & Events</h1>
+            <p>Stay updated with our latest activities and upcoming events</p>
+        </div>
+    </section>
+
+    <!-- ===== NEWS FEED SECTION ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="fb-row">
+                <!-- Post 1 -->
+                <div class="fb-card">
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJCITBS%2Fposts%2Fpfbid02sYU3qD4NUhBkU6FnjWNXYbuvz6qJGoTvxayX3WU9FFdHHawvbjCk8vbHBXfLuznBl&show_text=true&width=350" 
+                            width="350" 
+                            style="border:none;overflow:hidden" 
+                            scrolling="no" 
+                            frameborder="0" 
+                            allowfullscreen="true" 
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+                
+                <!-- Post 2 -->
+                <div class="fb-card">
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJCITBS%2Fposts%2Fpfbid02WDZ4Bnvwm9aDTM6yVKgJan2jmSQPKx9wW2HV3vN5QYKSaEdApyd6bV1CZkDVKBtrl&show_text=true&width=350" 
+                            width="350" 
+                            style="border:none;overflow:hidden" 
+                            scrolling="no" 
+                            frameborder="0" 
+                            allowfullscreen="true" 
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+                
+                <!-- Post 3 -->
+                <div class="fb-card">
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJCITBS%2Fposts%2Fpfbid02C4zC9iSByjBzHnwH9Syh6MncUe1Kij8KkBTpsM1RJzPJdN36uFEHATY6EHqEVsbvl&show_text=true&width=350" 
+                            width="350" 
+                            style="border:none;overflow:hidden" 
+                            scrolling="no" 
+                            frameborder="0" 
+                            allowfullscreen="true" 
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+
+                <!-- Add more posts here by copying the fb-card div -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/white.png" alt="JCI TBS - EL Mourouj">
+                    </a>
+                    <p>
+                        JCI TBS - EL Mourouj is a local organization of Junior Chamber International 
+                        dedicated to developing young leaders.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/JCITBS/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/jci_tbs" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/jci-tunis-business-school/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.tiktok.com/@jci.tbs" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="partners.html">Become a Partner</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 JCI TBS - EL Mourouj. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Facebook SDK Initialization -->
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({ 
+                xfbml: true,
+                version: 'v18.0'
+            });
+            FB.XFBML.parse();
+        };
+    </script>
+</body>
+</html>

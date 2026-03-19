@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JCI TBS - EL Mourouj Events | Discover our latest activities and events.">
+    <title>Events | JCI TBS - EL Mourouj</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/colored.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <img src="images/colored.png" alt="JCI TBS - EL Mourouj">
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list" id="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="team.html" class="nav-link">Our Team</a></li>
+                        <li><a href="events.html" class="nav-link active">Events</a></li>
+                        <li><a href="partners.html" class="nav-link">Partners</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="header-social">
+                        <a href="https://www.facebook.com/JCITBS/" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jci_tbs" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/jci-tunis-business-school/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@jci.tbs" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://x.com/JCI_TBS" target="_blank" aria-label="X (Twitter)">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://jvc.jci.cc/#/organization-detail?channel_id=8485&id=8216" target="_blank" aria-label="JVC">
+                            <img src="images/jvc.png" alt="JVC" style="height: 1em; width: auto; vertical-align: middle;" />
+                        </a>
+                    </div>
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Events</span>
+            </div>
+            <h1>Our Events</h1>
+            <p>Explore the impactful events and activities we've organized.</p>
+        </div>
+    </section>
+
+    <!-- ===== EVENTS GRID ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Events</h2>
+                <p>Discover the activities that shape our community.</p>
+            </div>
+
+            <!-- Event Filters -->
+            <div class="news-filters" id="events-filter" style="display: none;">
+                <!-- Filter buttons will be injected here dynamically -->
+            </div>
+
+            <!-- Events Grid -->
+            <div class="events-grid" id="events-grid">
+                <!-- Dynamic events will be injected here if the Meta API is connected. -->
+                <!-- Static Fallback / Currently manually added Event Cards -->
+                <div class="event-card reveal">
+                    <a href="event-ai-odyssey-2025.html"  class="event-card-link">
+                        <div class="event-image">
+                            <img src="images/586913068_889249683444243_1923548606886018440_n.jpg" alt="AI Odyssey Hackathon">
+                            <span class="event-date">
+                                <span class="event-date-day">30</span>
+                                <span class="event-date-month">Nov</span>
+                                <span class="event-date-year">2025</span>
+                            </span>
+                        </div>
+                        <div class="event-content">
+                            <h3>AI Odyssey Hackathon</h3>
+                            <p class="event-excerpt">AI Odyssey is an international hackathon organized in collaboration with GDG FST and Dione Protocol. Over the course of 7 days, students and young professionals work on projects related to AI, data, finance, and sustainability.</p>
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-briefcase"></i> Career</span>
+                                <span class="event-count"><i class="fas fa-users"></i> +160 Participants</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Event Card -->
+                <div class="event-card reveal">
+                    <a href="Business-feud-2025.html"  class="event-card-link">
+                        <div class="event-image">
+                            <img src="images/events/business feud.jpg" alt="Business Feud">
+                            <span class="event-date">
+                                <span class="event-date-day">29</span>
+                                <span class="event-date-month">Nov</span>
+                                <span class="event-date-year">2025</span>
+                            </span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Business Feud</h3>
+                            <p class="event-excerpt">A dynamic business competition inspired by the corporate world, where teams compete to win market share through strategic challenges and rapid decision-making rounds.</p>
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-chalkboard"></i> Training</span>
+                                <span class="event-count"><i class="fas fa-users"></i> 25 Participants</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Event Card -->
+                <div class="event-card reveal">
+                    <a href="event-cultural-journey-2025.html"  class="event-card-link">
+                        <div class="event-image">
+                            <img src="images/events/cultural journey.jpg" alt="Cultural Journey">
+                            <span class="event-date">
+                                <span class="event-date-day">9</span>
+                                <span class="event-date-month">Nov</span>
+                                <span class="event-date-year">2025</span>
+                            </span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Cultural Journey</h3>
+                            <p class="event-excerpt">Members explored the rich cultural heritage of Tunisia through guided tours and interactive workshops.</p>
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-heart"></i> Service</span>
+                                <span class="event-count"><i class="fas fa-users"></i> 22 Participants</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Event Card -->
+                <div class="event-card reveal">
+                    <a href="event-company-visit-2025.html"  class="event-card-link">
+                        <div class="event-image">
+                            <img src="images/events/company visit.jpg" alt="Company Visit - 2nd Visit">
+                            <span class="event-date">
+                                <span class="event-date-day">29</span>
+                                <span class="event-date-month">Oct</span>
+                                <span class="event-date-year">2025</span>
+                            </span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Company Visit - 2nd Visit</h3>
+                            <p class="event-excerpt">A series of visits to successful companies across various sectors, offering participants a behind-the-scenes look at dedication, innovation, and corporate culture.</p>
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-building"></i> Professional Development</span>
+                                <span class="event-count"><i class="fas fa-users"></i> 30 Participants</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Event Card -->
+                <div class="event-card reveal">
+                    <a href="event-linkup-2025.html"  class="event-card-link">
+                        <div class="event-image">
+                            <img src="images/events/link up.jpg" alt="LinkUp - Regional Collaboration">
+                            <span class="event-date">
+                                <span class="event-date-day">25</span>
+                                <span class="event-date-month">Oct</span>
+                                <span class="event-date-year">2025</span>
+                            </span>
+                        </div>
+                        <div class="event-content">
+                            <h3>LinkUp - Regional Collaboration</h3>
+                            <p class="event-excerpt">An exceptional inter-LOM team building bringing together five JCI organizations for a day of energy, unity, and collaboration.</p>
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-handshake"></i> Team Building</span>
+                                <span class="event-count"><i class="fas fa-users"></i> 50 Participants</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Event Card -->
+                <div class="event-card reveal">
+                    <a href="event-welcoming-bootcamp-2025.html"  class="event-card-link">
+                        <div class="event-image">
+                            <img src="images/events/bootcamp.jpg" alt="Welcoming Bootcamp 2025">
+                            <span class="event-date">
+                                <span class="event-date-day">18</span>
+                                <span class="event-date-month">Oct</span>
+                                <span class="event-date-year">2025</span>
+                            </span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Welcoming Bootcamp 2025</h3>
+                            <p class="event-excerpt">An internal event introducing new members to the spirit and mission of JCI through interactive workshops and team building activities.</p>
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-users"></i> Recruitment</span>
+                                <span class="event-count"><i class="fas fa-users"></i> 50 Participants</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Event Card -->
+                <div class="event-card reveal">
+                    <a href="event-info-session-2025.html"  class="event-card-link">
+                        <div class="event-image">
+                            <img src="images/events/info-session.jpg" alt="✨ The One Where You Belong ✨">
+                            <span class="event-date">
+                                <span class="event-date-day">1</span>
+                                <span class="event-date-month">Oct</span>
+                                <span class="event-date-year">2025</span>
+                            </span>
+                        </div>
+                        <div class="event-content">
+                            <h3>✨ The One Where You Belong ✨</h3>
+                            <p class="event-excerpt">Discover a community that feels more like family than just teamwork. Join us to learn about JCI TBS and find your place to grow, lead, and make an impact.</p>
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-info-circle"></i> Info Session</span>
+                                <span class="event-count"><i class="fas fa-heart"></i> Community</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Event Card -->
+                <div class="event-card reveal">
+                    <a href="https://fb.me/e/3jXEQ7VrO" target="_blank" class="event-card-link">
+                        <div class="event-image">
+                            <img src="images/events/tbs universe.jpg" alt="TBS Universe">
+                            <span class="event-date">
+                                <span class="event-date-day">22</span>
+                                <span class="event-date-month">Jul</span>
+                                <span class="event-date-year">2025</span>
+                            </span>
+                        </div>
+                        <div class="event-content">
+                            <h3>TBS Universe</h3>
+                            <p class="event-excerpt">خوذ الباك و ارتاح ! الspécialité في الفاك ساهلة ! تخرّج تو ترتاح !
+كان تعديت بواحدة من الجمل هاذم احنا عنا ليك الحل 🤗
+JCI TBS تنظملكم événement باش توجهكم و تعطيكم معلومات اللازمة على TBS من بعد الباك حتى التخرج.🤯</p>
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-info-circle"></i> Info Session</span>
+                                <span class="event-count"><i class="fas fa-graduation-cap"></i> TBS Guide</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Event Card -->
+                <div class="event-card reveal">
+                    <a href="https://fb.me/e/hrxE0GNFl" target="_blank" class="event-card-link">
+                        <div class="event-image">
+                            <img src="images/events/summer.jpg" alt="Summer Camp">
+                            <span class="event-date">
+                                <span class="event-date-day">20</span>
+                                <span class="event-date-month">Jun</span>
+                                <span class="event-date-year">2025</span>
+                            </span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Summer Camp</h3>
+                            <p class="event-excerpt">Join us at the Summer Camp Adventure in Mahdia ✨
+Step away from the routine and dive into two unforgettable days of sunshine, laughter, and team spirit ☀️
+Whether you're riding the waves, making memories, or growing as a leader, this is the summer escape you've been waiting for💙</p>
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-info-circle"></i> Team Building</span>
+                                <span class="event-count"><i class="fas fa-users"></i> undefined</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Event Card -->
+                <div class="event-card reveal">
+                    <a href="https://fb.me/e/3HKpDr3Va" target="_blank" class="event-card-link">
+                        <div class="event-image">
+                            <img src="images/events/reset.jpg" alt="Reset and Rise">
+                            <span class="event-date">
+                                <span class="event-date-day">19</span>
+                                <span class="event-date-month">Jun</span>
+                                <span class="event-date-year">2025</span>
+                            </span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Reset and Rise</h3>
+                            <p class="event-excerpt">Organized by JCI TBS El Mourouj in collaboration with JCI Curepipe
+In today's fast-paced world, prioritizing mental well-being is more important than ever. Reset and Rise is a powerful two-part online event designed to help you pause, reflect, and come back mentally and emotionally stronger🧘‍♀️🧠
+Join us for two inspiring and interactive sessions where you'll discover how small mindset shifts and healthy habits can create a lasting positive impact on your mental health.</p>
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-brain"></i> Event</span>
+                                <span class="event-count"><i class="fas fa-users"></i> undefined</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Event Card -->
+                <div class="event-card reveal">
+                    <a href="https://fb.me/e/3HKpDr3Va" target="_blank" class="event-card-link">
+                        <div class="event-image">
+                            <img src="images/events/axefinance.jpg" alt="AxeFinance">
+                            <span class="event-date">
+                                <span class="event-date-day">21</span>
+                                <span class="event-date-month">May</span>
+                                <span class="event-date-year">2025</span>
+                            </span>
+                        </div>
+                        <div class="event-content">
+                            <h3>AxeFinance</h3>
+                            <p class="event-excerpt">Looking to launch your career in a fast-growing industry? This is your chance to get hired or land an internship with one of Tunisia's leading fintech companies! 💼🚀
+Join us for an exclusive Info Session with AxeFinance, a global leader in credit process automation, and discover how you can become part of their dynamic and innovative team.</p>
+                            <div class="event-meta">
+                                <span class="event-type"><i class="fas fa-line-chart"></i> Event</span>
+                                <span class="event-count"><i class="fas fa-users"></i> undefined</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/white.png" alt="JCI TBS - EL Mourouj">
+                    </a>
+                    <p>
+                        JCI TBS - EL Mourouj is a local organization of Junior Chamber International 
+                        dedicated to developing young leaders.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/JCITBS/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/jci_tbs" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/jci-tunis-business-school/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.tiktok.com/@jci.tbs" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://x.com/JCI_TBS" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://jvc.jci.cc/#/organization-detail?channel_id=8485&id=8216" aria-label="JVC"><img src="images/wjvc.png" alt="JVC" style="height: 1em; width: auto; vertical-align: middle;" /></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="partners.html">Become a Partner</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+            <div class="footer-bottom">
+                <p>&copy; 2026 JCI TBS - EL Mourouj. All rights reserved.</p>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="scripts/meta-events.js"></script>
+</body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCI TBS Event Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #056baf;
+            --secondary-gold: #d4af37;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --bg-light: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: var(--primary-blue);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-medium);
+            font-size: 0.95rem;
+        }
+
+        input, textarea, select {
+            padding: 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #044a87;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(5,107,175,0.3);
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c82333;
+        }
+
+        .btn-secondary {
+            background: var(--text-medium);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: var(--text-dark);
+        }
+
+        .events-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .events-table th,
+        .events-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .events-table th {
+            background: var(--bg-light);
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .events-table tr:hover {
+            background: var(--bg-light);
+        }
+
+        .event-img-preview {
+            width: 80px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 0.85rem;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-medium);
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            color: var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .save-section {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .save-section p {
+            margin-bottom: 20px;
+            color: var(--text-medium);
+        }
+
+        .alert {
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .alert.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .icon-select {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            gap: 10px;
+            max-height: 150px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+        }
+
+        .icon-option {
+            padding: 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .icon-option:hover {
+            border-color: var(--primary-blue);
+            background: var(--bg-light);
+        }
+
+        .icon-option.selected {
+            border-color: var(--primary-blue);
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .help-text {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-calendar-alt"></i> JCI TBS Event Manager</h1>
+            <p>Manage your events easily - Add, edit, and organize all your JCI TBS events in one place</p>
+        </header>
+
+        <div class="content">
+            <div id="alert" class="alert"></div>
+
+            <!-- Add/Edit Event Form -->
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-plus-circle"></i> Add New Event</h2>
+                
+                <form id="eventForm">
+                    <input type="hidden" id="eventId">
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="eventTitle">Event Title *</label>
+                            <input type="text" id="eventTitle" required placeholder="e.g., AI Odyssey Hackathon">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventSlug">URL Slug *</label>
+                            <input type="text" id="eventSlug" required placeholder="e.g., ai-odyssey">
+                            <span class="help-text">Used in URL: event-[slug]-[year].html</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventDate">Start Date *</label>
+                            <input type="date" id="eventDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventEndDate">End Date (Optional)</label>
+                            <input type="date" id="eventEndDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventImage">Image Path/URL *</label>
+                            <input type="text" id="eventImage" required placeholder="images/events/your-event.jpg">
+                            <span class="help-text">Upload image to images/events/ first</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventType">Event Type *</label>
+                            <select id="eventType" required>
+                                <option value="">Select Type...</option>
+                                <option value="Hackathon">Hackathon</option>
+                                <option value="Career">Career</option>
+                                <option value="Training">Training</option>
+                                <option value="Workshop">Workshop</option>
+                                <option value="Competition">Competition</option>
+                                <option value="Service">Service</option>
+                                <option value="Professional Development">Professional Development</option>
+                                <option value="Team Building">Team Building</option>
+                                <option value="Recruitment">Recruitment</option>
+                                <option value="Info Session">Info Session</option>
+                                <option value="Networking">Networking</option>
+                                <option value="Conference">Conference</option>
+                                <option value="Social Event">Social Event</option>
+                                <option value="Community Service">Community Service</option>
+                                <option value="Event">General Event</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventTypeIcon">Type Icon *</label>
+                            <select id="eventTypeIcon" required>
+                                <optgroup label="Development & Career">
+                                    <option value="fa-code">💻 Code (Hackathon/Tech)</option>
+                                    <option value="fa-laptop-code">💻 Laptop Code (Coding)</option>
+                                    <option value="fa-briefcase">💼 Briefcase (Career)</option>
+                                    <option value="fa-user-tie">👔 User Tie (Professional)</option>
+                                    <option value="fa-building">🏢 Building (Corporate)</option>
+                                    <option value="fa-graduation-cap">🎓 Graduation Cap (Education)</option>
+                                    <option value="fa-certificate">📜 Certificate (Certification)</option>
+                                </optgroup>
+                                <optgroup label="Learning & Training">
+                                    <option value="fa-chalkboard">📋 Chalkboard (Training)</option>
+                                    <option value="fa-chalkboard-teacher">👨‍🏫 Teacher (Workshop)</option>
+                                    <option value="fa-book">📖 Book (Learning)</option>
+                                    <option value="fa-lightbulb">💡 Lightbulb (Ideas/Innovation)</option>
+                                    <option value="fa-brain">🧠 Brain (Mental Development)</option>
+                                </optgroup>
+                                <optgroup label="Competition & Challenge">
+                                    <option value="fa-trophy">🏆 Trophy (Competition)</option>
+                                    <option value="fa-medal">🥇 Medal (Achievement)</option>
+                                    <option value="fa-award">🎖️ Award (Recognition)</option>
+                                    <option value="fa-gamepad">🎮 Gamepad (Game/Challenge)</option>
+                                </optgroup>
+                                <optgroup label="Networking & Social">
+                                    <option value="fa-users">👥 Users (Recruitment/Community)</option>
+                                    <option value="fa-handshake">🤝 Handshake (Team Building/Partnership)</option>
+                                    <option value="fa-user-friends">👫 Friends (Networking)</option>
+                                    <option value="fa-comments">💬 Comments (Discussion)</option>
+                                    <option value="fa-bullhorn">📣 Bullhorn (Announcement)</option>
+                                </optgroup>
+                                <optgroup label="Service & Community">
+                                    <option value="fa-heart">❤️ Heart (Service/Charity)</option>
+                                    <option value="fa-hands-helping">🤲 Helping Hands (Volunteering)</option>
+                                    <option value="fa-hand-holding-heart">💝 Heart in Hand (Care)</option>
+                                    <option value="fa-seedling">🌱 Seedling (Environmental)</option>
+                                    <option value="fa-globe">🌍 Globe (Global Initiative)</option>
+                                </optgroup>
+                                <optgroup label="Business & Finance">
+                                    <option value="fa-line-chart">📈 Chart (Business/Growth)</option>
+                                    <option value="fa-chart-line">📊 Line Chart (Analytics)</option>
+                                    <option value="fa-dollar-sign">💵 Dollar (Finance)</option>
+                                    <option value="fa-coins">🪙 Coins (Investment)</option>
+                                    <option value="fa-rocket">🚀 Rocket (Startup/Launch)</option>
+                                </optgroup>
+                                <optgroup label="Information & Media">
+                                    <option value="fa-info-circle">ℹ️ Info (Info Session)</option>
+                                    <option value="fa-microphone">🎤 Microphone (Speaking/Conference)</option>
+                                    <option value="fa-camera">📷 Camera (Photography/Media)</option>
+                                    <option value="fa-video">📹 Video (Streaming/Recording)</option>
+                                    <option value="fa-newspaper">📰 Newspaper (News/Press)</option>
+                                </optgroup>
+                                <optgroup label="Events & Activities">
+                                    <option value="fa-calendar-alt">📅 Calendar (Event)</option>
+                                    <option value="fa-glass-cheers">🥂 Cheers (Celebration)</option>
+                                    <option value="fa-music">🎵 Music (Social Event)</option>
+                                    <option value="fa-ticket-alt">🎟️ Ticket (Event Entry)</option>
+                                    <option value="fa-map-marked-alt">🗺️ Map (Visit/Trip)</option>
+                                    <option value="fa-plane">✈️ Plane (Travel)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventParticipants">Participants *</label>
+                            <input type="text" id="eventParticipants" required placeholder="e.g., +160 Participants">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="eventExcerpt">Short Description (for card) *</label>
+                            <textarea id="eventExcerpt" required placeholder="Brief description shown on event cards (2-3 sentences)"></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="eventDescription">Full Description (Optional)</label>
+                            <textarea id="eventDescription" placeholder="Detailed description for event detail page"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventLocation">Location (Optional)</label>
+                            <input type="text" id="eventLocation" placeholder="e.g., TBS Campus">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventCategory">Category (Optional)</label>
+                            <input type="text" id="eventCategory" placeholder="e.g., Career Development">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="eventExternalLink">External Link (Optional)</label>
+                            <input type="url" id="eventExternalLink" placeholder="https://facebook.com/events/...">
+                            <span class="help-text">If provided, card will link to this URL instead of detail page</span>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add Event
+                        </button>
+                        <button type="button" class="btn btn-secondary" onclick="resetForm()">
+                            <i class="fas fa-times"></i> Clear Form
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Current Events List -->
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-list"></i> Current Events (<span id="eventCount">0</span>)</h2>
+                
+                <div id="eventsTableContainer">
+                    <table class="events-table" id="eventsTable">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Title</th>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Participants</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="eventsTableBody">
+                            <!-- Events will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Save Section -->
+            <section class="save-section">
+                <h3><i class="fas fa-save"></i> Save Changes</h3>
+                <p>Once you've added or modified events, save the changes to update events.json</p>
+                <button class="btn btn-success btn-large" onclick="saveEvents()">
+                    <i class="fas fa-save"></i> Save All Events to JSON
+                </button>
+                <p style="margin-top: 15px; font-size: 0.9rem;">
+                    <i class="fas fa-info-circle"></i> After saving, run <code style="background: white; padding: 4px 8px; border-radius: 4px;">npm run generate-events</code> to update your website
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        let events = [];
+        let editingId = null;
+
+        // Load events from data/events.json
+        async function loadEvents() {
+            try {
+                const response = await fetch('../data/events.json');
+                const data = await response.json();
+                events = data.events || [];
+                renderEventsTable();
+                showAlert('Events loaded successfully!', 'success');
+            } catch (error) {
+                console.error('Error loading events:', error);
+                showAlert('Error loading events. Make sure data/events.json exists.', 'error');
+            }
+        }
+
+        // Render events table
+        function renderEventsTable() {
+            const tbody = document.getElementById('eventsTableBody');
+            const countSpan = document.getElementById('eventCount');
+            
+            countSpan.textContent = events.length;
+
+            if (events.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="6" class="empty-state">
+                            <i class="fas fa-calendar-times"></i>
+                            <p>No events yet. Add your first event above!</p>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tbody.innerHTML = events.map(event => {
+                const date = new Date(event.date);
+                const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+                
+                return `
+                    <tr>
+                        <td><img src="../${event.image}" alt="${event.title}" class="event-img-preview" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%27 height=%27100%27%3E%3Crect fill=%27%23ddd%27 width=%27100%27 height=%27100%27/%3E%3Ctext fill=%27%23999%27 x=%2750%25%27 y=%2750%25%27 text-anchor=%27middle%27 dy=%27.3em%27%3ENo Image%3C/text%3E%3C/svg%3E'"></td>
+                        <td><strong>${event.title}</strong></td>
+                        <td>${formattedDate}</td>
+                        <td><i class="fas ${event.typeIcon}"></i> ${event.type}</td>
+                        <td>${event.participants || 'N/A'}</td>
+                        <td class="action-buttons">
+                            <button class="btn btn-primary btn-small" onclick="editEvent(${event.id})">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                            <button class="btn btn-danger btn-small" onclick="deleteEvent(${event.id})">
+                                <i class="fas fa-trash"></i> Delete
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // Show alert
+        function showAlert(message, type = 'success') {
+            const alert = document.getElementById('alert');
+            alert.className = `alert ${type} show`;
+            alert.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i> ${message}`;
+            
+            setTimeout(() => {
+                alert.classList.remove('show');
+            }, 5000);
+        }
+
+        // Handle form submit
+        document.getElementById('eventForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const id = editingId || (events.length > 0 ? Math.max(...events.map(e => e.id)) + 1 : 1);
+            const date = document.getElementById('eventDate').value;
+            const year = new Date(date).getFullYear();
+
+            const eventData = {
+                id: id,
+                title: document.getElementById('eventTitle').value,
+                slug: document.getElementById('eventSlug').value,
+                date: date,
+                year: year,
+                image: document.getElementById('eventImage').value,
+                excerpt: document.getElementById('eventExcerpt').value,
+                type: document.getElementById('eventType').value,
+                typeIcon: document.getElementById('eventTypeIcon').value,
+                participants: document.getElementById('eventParticipants').value
+            };
+
+            // Optional fields
+            const endDate = document.getElementById('eventEndDate').value;
+            if (endDate) eventData.endDate = endDate;
+
+            const description = document.getElementById('eventDescription').value;
+            if (description) eventData.description = description;
+
+            const location = document.getElementById('eventLocation').value;
+            if (location) eventData.location = location;
+
+            const category = document.getElementById('eventCategory').value;
+            if (category) eventData.category = category;
+
+            const externalLink = document.getElementById('eventExternalLink').value;
+            if (externalLink) {
+                eventData.externalLink = externalLink;
+            } else {
+                eventData.detailPage = `event-${eventData.slug}-${year}.html`;
+            }
+
+            if (editingId) {
+                // Update existing event
+                const index = events.findIndex(e => e.id === editingId);
+                events[index] = eventData;
+                showAlert('Event updated successfully!', 'success');
+            } else {
+                // Add new event
+                events.unshift(eventData); // Add to beginning (newest first)
+                showAlert('Event added successfully!', 'success');
+            }
+
+            renderEventsTable();
+            resetForm();
+        });
+
+        // Edit event
+        function editEvent(id) {
+            const event = events.find(e => e.id === id);
+            if (!event) return;
+
+            editingId = id;
+            
+            document.getElementById('eventId').value = event.id;
+            document.getElementById('eventTitle').value = event.title;
+            document.getElementById('eventSlug').value = event.slug;
+            document.getElementById('eventDate').value = event.date;
+            document.getElementById('eventEndDate').value = event.endDate || '';
+            document.getElementById('eventImage').value = event.image;
+            document.getElementById('eventType').value = event.type;
+            document.getElementById('eventTypeIcon').value = event.typeIcon;
+            document.getElementById('eventParticipants').value = event.participants;
+            document.getElementById('eventExcerpt').value = event.excerpt;
+            document.getElementById('eventDescription').value = event.description || '';
+            document.getElementById('eventLocation').value = event.location || '';
+            document.getElementById('eventCategory').value = event.category || '';
+            document.getElementById('eventExternalLink').value = event.externalLink || '';
+
+            document.querySelector('#eventForm button[type="submit"]').innerHTML = '<i class="fas fa-save"></i> Update Event';
+            
+            // Scroll to form
+            document.getElementById('eventForm').scrollIntoView({ behavior: 'smooth' });
+            showAlert('Editing event. Make changes and click Update Event.', 'success');
+        }
+
+        // Delete event
+        function deleteEvent(id) {
+            if (!confirm('Are you sure you want to delete this event?')) return;
+            
+            events = events.filter(e => e.id !== id);
+            renderEventsTable();
+            showAlert('Event deleted successfully!', 'success');
+        }
+
+        // Reset form
+        function resetForm() {
+            editingId = null;
+            document.getElementById('eventForm').reset();
+            document.getElementById('eventId').value = '';
+            document.querySelector('#eventForm button[type="submit"]').innerHTML = '<i class="fas fa-plus"></i> Add Event';
+        }
+
+        // Auto-generate slug from title
+        document.getElementById('eventTitle').addEventListener('input', function() {
+            if (!editingId) { // Only auto-generate for new events
+                const slug = this.value
+                    .toLowerCase()
+                    .replace(/[^a-z0-9\s-]/g, '')
+                    .replace(/\s+/g, '-')
+                    .replace(/-+/g, '-')
+                    .trim();
+                document.getElementById('eventSlug').value = slug;
+            }
+        });
+
+        // Save events to JSON
+        async function saveEvents() {
+            const dataToSave = {
+                events: events
+            };
+
+            // Create downloadable JSON file
+            const blob = new Blob([JSON.stringify(dataToSave, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'events.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            showAlert('Events saved! Download the events.json file and replace data/events.json, then run "npm run generate-events"', 'success');
+        }
+
+        // Load events on page load
+        loadEvents();
+    </script>
+</body>
+</html>
