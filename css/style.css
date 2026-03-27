@@ -21,13 +21,11 @@ body {
 }
 
 .team-row-flex {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
-    max-width: 1200px;
-    margin: 0 auto 40px auto;
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
 .team-card {
@@ -127,39 +125,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-@media (max-width: 1200px) {
-    .what-we-do-flex {
-        gap: 60px;
-        max-width: 1000px;
-    }
-    .what-we-do-grid {
-        width: 360px;
-    }
-}
 
-@media (max-width: 900px) {
-    .what-we-do-dark {
-        padding: 48px 0 !important;
-    }
-    .what-we-do-flex {
-        flex-direction: column;
-        gap: 32px;
-        max-width: 100%;
-    }
-    .what-we-do-content, .what-we-do-images {
-        max-width: 100%;
-        padding-right: 0;
-        justify-content: center;
-        align-items: center;
-    }
-    .what-we-do-grid {
-        width: 100%;
-        max-width: 400px;
-    }
-    .what-we-do-content h2, .what-we-do-content p {
-        text-align: center;
-    }
-}
 /* ===================================
    JCI TBS - EL Mourouj
    Minimalistic & Clean Design
@@ -957,8 +923,9 @@ section {
 
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
+    justify-content: center;
 }
 
 .value-item {
