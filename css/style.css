@@ -1826,6 +1826,19 @@ section {
     }
 
     /* Fixed Dimension & Layout Overrides for Mobile */
+    .what-we-do-flex {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .what-we-do-content {
+        padding-right: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+    .what-we-do-content h2,
+    .what-we-do-content p {
+        text-align: center;
+    }
     .team-card {
         width: 100%;
         height: auto;
