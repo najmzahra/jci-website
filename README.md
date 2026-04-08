@@ -13,7 +13,7 @@ jci/
 ├── index.html          # Home page
 ├── about.html          # About Us page
 ├── team.html           # Our Team (2026 Board) page
-├── news.html           # News & Events page
+├── events.html           # News & Events page
 ├── partners.html       # Be a Partner page
 ├── contact.html        # Contact page
 ├── css/
@@ -50,14 +50,7 @@ jci/
 - Past Boards accordion
 - Join CTA
 
-### 4. News & Events (`news.html`)
-- Category filters (All, Events, Awards, Announcements, Press)
-- Featured news section
-- News grid with cards
-- Upcoming events highlight
-- Newsletter signup CTA
-
-### 5. Be a Partner (`partners.html`)
+### 4  . Be a Partner (`partners.html`)
 - Partnership value proposition
 - 6 benefits of partnering
 - 3-tier partnership levels (Bronze, Silver, Gold)
@@ -65,78 +58,18 @@ jci/
 - Partnership inquiry form
 - Contact information
 
-### 6. Contact (`contact.html`)
+### 5. Contact (`contact.html`)
 - Contact form with subject selection
 - Contact information (location, email, phone)
 - Social media links
 - Interactive Google Maps
 - FAQ accordion
 
-## 🎨 Design Features
 
-- **Modern JCI-inspired design** - Blue & gold color scheme matching JCI branding
-- **Fully responsive** - Works on desktop, tablet, and mobile devices
-- **Smooth animations** - Scroll reveal effects, hover animations
-- **Interactive elements** - Accordions, filters, mobile menu
-- **Accessibility** - ARIA labels, semantic HTML, proper contrast
-
-## 🛠 Technologies Used
-
-- **HTML5** - Semantic markup
-- **CSS3** - Custom properties, Flexbox, Grid, animations
-- **JavaScript** (Vanilla) - No dependencies required
-- **Google Fonts** - Inter font family
-- **Font Awesome 6** - Icon library
-- **Google Maps** - Embedded map
-
-## 🚀 Getting Started
-
-1. Clone or download this repository
-2. Open `index.html` in a web browser
-3. That's it! No build process required
-
-## ✏️ Customization
-
-### Update Content
-- Edit the HTML files directly to update text content
-- Replace placeholder images in the `images/` folder
-- Update social media links throughout the site
-
-### Update Styling
-- Modify CSS variables in `css/style.css` to change colors:
-  ```css
-  :root {
-      --primary-blue: #0066B3;
-      --secondary-gold: #F5A623;
-      /* ... other variables */
-  }
-  ```
-
-### Update Logo
-- Replace the JCI logo URL in the header/footer of each HTML file
-- Add your own logo to the `images/` folder
-
-### Google Maps
-- Update the Google Maps embed URL in `index.html` and `contact.html`
-- Go to Google Maps → Share → Embed a map
-
-## 📱 Responsive Breakpoints
-
-- **Desktop**: > 992px
-- **Tablet**: 768px - 992px
-- **Mobile**: < 768px
-- **Small Mobile**: < 480px
-
-## 🔧 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
 
 ## 📝 License
 
-This project is created for JCI TBS. Feel free to adapt for your own JCI chapter.
+This project is created for JCI TBS.
 
 ## 🤝 Credits
 
@@ -147,4 +80,4 @@ This project is created for JCI TBS. Feel free to adapt for your own JCI chapter
 
 ---
 
-**Developing Leaders for a Changing World** 🌍
+**Developing futur Leaders** 🌍
