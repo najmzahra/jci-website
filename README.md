@@ -24,6 +24,7 @@ jci/
 └── README.md           # This file
 ```
 
+
 ## 📄 Pages Overview
 
 ### 1. Home (`index.html`)
